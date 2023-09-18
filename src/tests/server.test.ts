@@ -8,8 +8,8 @@ import {
 import { Server } from "http";
 import MockAdapter from "axios-mock-adapter";
 import axios from "axios";
-import { randomNumberErrorResponseSchema, randomNumberSuccessResponseSchema } from "../service/random-numbers-average";
 import { z } from "zod";
+import { randomNumberErrorResponseSchema, randomNumberSuccessResponseSchema } from "../service/schemas";
 
 type SuccessResponse = z.infer<typeof randomNumberSuccessResponseSchema>[0];
 type ErrorResponse = z.infer<typeof randomNumberErrorResponseSchema>[0];
@@ -76,14 +76,9 @@ describe("Random numbers average endpoint", () => {
   })
 
   describe("Scenario with errors: some calls to the external endpoint return an error.", () => {
-    let mock;
-
     beforeEach(() => {
       jest.useFakeTimers();
   
-      // Set up mock responses
-      mock = new MockAdapter(axios);
-
       // Set up mock responses
       const responsesQueue: ResponseQueueItem[] = [
         [200, [{ status: "success", min: 0, max: 100, random: 50 }]],
@@ -93,7 +88,7 @@ describe("Random numbers average endpoint", () => {
         [200, [{ status: "error", code: "7", reason: "Cannot connect to our database." }]],
       ];
 
-      setupMockResponses(responsesQueue);      
+      setupMockResponses(responsesQueue);
       startFetchingRandomNumbers();
     });
   

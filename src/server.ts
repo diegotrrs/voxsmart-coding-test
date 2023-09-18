@@ -1,6 +1,6 @@
 
 import express from "express";
-import { getAverageRandomNumber, startFetchingRandomNumbers, stopFetchingRandomNumbers, clearRandomNumbers } from './ controller/random-numbers-average';
+import { getAverageRandomNumber, startFetchingRandomNumbers, stopFetchingRandomNumbers, clearRandomNumbers } from './ controller/randomNumbersAverage';
 
 const app = express();
 
