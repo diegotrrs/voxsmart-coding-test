@@ -5,6 +5,18 @@ From the root folder execute:
 ```
 npm run build && npm run start
 ```
+
+In order to call the endpoint, make a Get request to
+```
+http://localhost:3000/averageRandomNumbers
+```
+
+You can also use the following CURL command
+
+```
+curl --location 'http://localhost:3000/averageRandomNumbers'
+```
+
 # 2. How to run the tests
 From the root folder execute:
 ```

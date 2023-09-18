@@ -68,7 +68,7 @@ describe("Random numbers average endpoint", () => {
       // Forward time by 3 seconds. This will cause the setInterval in startFetching() to be called 3 times.
       jest.advanceTimersByTime(3000);
   
-      const response = await request(app).get("/random-numbers-average");
+      const response = await request(app).get("/averageRandomNumbers");
       expect(response.status).toBe(200);
       expect(response.body).toHaveProperty("average");
       expect(response.body.average).toBe(60);
@@ -102,7 +102,7 @@ describe("Random numbers average endpoint", () => {
       // Forward time by 3 seconds. This will cause the setInterval in startFetching() to be called 3 times.
       jest.advanceTimersByTime(3000);
   
-      const response = await request(app).get("/random-numbers-average");
+      const response = await request(app).get("/averageRandomNumbers");
       expect(response.status).toBe(200);
       expect(response.body).toHaveProperty("average");
       expect(response.body.average).toBe(40); // 50 + 30 / 2

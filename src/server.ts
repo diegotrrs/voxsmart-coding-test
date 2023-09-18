@@ -1,11 +1,11 @@
 
 import express from "express";
-import { getAverageRandomNumber, startFetchingRandomNumbers, stopFetchingRandomNumbers, clearRandomNumbers } from './ controller/randomNumbersAverage';
+import { getAverageRandomNumber, startFetchingRandomNumbers, stopFetchingRandomNumbers, clearRandomNumbers } from './ controller/averageRandomNumbers';
 
 const app = express();
 
 app.use(express.json())
-app.get("/random-numbers-average", getAverageRandomNumber)
+app.get("/averageRandomNumbers", getAverageRandomNumber)
 
 export {
   app,

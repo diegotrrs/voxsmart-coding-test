@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { getAverageRandomNumber as getAverageService, clearRandomNumbers as clearRandomNumbersService, startFetchingRandomNumbers as startFetchingService, stopFetchingRandomNumbers as stopFetchingService  } from "../service/randomNumbersAverage";
+import { getAverageRandomNumber as getAverageService, clearRandomNumbers as clearRandomNumbersService, startFetchingRandomNumbers as startFetchingService, stopFetchingRandomNumbers as stopFetchingService  } from "../service/averageRandomNumbers";
 
 export const getAverageRandomNumber = (_req: Request, res: Response) => {
   const average = getAverageService()
