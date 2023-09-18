@@ -1,0 +1,4 @@
+node_modules
+dist
+prisma
+src/generated/zod-schemas
