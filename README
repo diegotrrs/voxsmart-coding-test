@@ -1,0 +1,11 @@
+TODO
+Document getEnvAsNumber
+Testing
+
+-r dotenv/config part ensures dotenv is preloaded.
+
+
+Things to mention
+[] cors
+[] routes
+[] Read internal from env
