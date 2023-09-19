@@ -1,6 +1,6 @@
 
 import express from "express";
-import { getAverageRandomNumber, startFetchingRandomNumbers, stopFetchingRandomNumbers, clearRandomNumbers } from './ controller/averageRandomNumbers';
+import { getAverageRandomNumber, fetchRandomNumbers, stopFetchingRandomNumbers, clearRandomNumbers } from './ controller/averageRandomNumbers';
 
 const app = express();
 
@@ -11,6 +11,6 @@ export {
   app,
   // The following functions are exported because they are needed for testing.
   clearRandomNumbers,
-  startFetchingRandomNumbers,
+  fetchRandomNumbers,
   stopFetchingRandomNumbers,
 }

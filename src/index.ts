@@ -1,5 +1,5 @@
 
-import { app, startFetchingRandomNumbers } from "./server";
+import { app, fetchRandomNumbers } from "./server";
 
 const PORT = 3000;
 
@@ -7,4 +7,4 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-startFetchingRandomNumbers()
+fetchRandomNumbers()
