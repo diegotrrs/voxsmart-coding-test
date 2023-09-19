@@ -51,6 +51,8 @@ The [supertest](https://www.npmjs.com/package/supertest) library is employed to 
 
 To stabilize and make tests predictable, [Axios Mock Adapter](https://www.npmjs.com/package/axios-mock-adapter) is utilized to mock requests to CSRNG.
 
+Notice that the ``startFetchingRandomNumbers, stopFetchingRandomNumbers, clearRandomNumbers`` functions from the service are accessed by the testing code in order to make the each test case independent and isolated for each other.
+
 ## 3.6 Constraints
 As the random numbers are retained in memory, the total count of random numbers will be constrained by Node's memory allocation. Although the memory varies depending on the operating system and its version, this limitation is unlikely to pose a problem given the scope and objective of this exercise.
 
