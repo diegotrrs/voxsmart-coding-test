@@ -68,3 +68,5 @@ As the random numbers are retained in memory, the total count of random numbers 
 ## 3.8 Improvements
 - Constants like `MILLISECONDS_TO_WAIT_FOR_MAX_QUERIES_REACHED_ERRORS` and `FETCH_RANDOM_NUMBER_INTERNAL_MS` could be transferred to an `.env` file.
 - The code could check if the [retry-after](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) header is present as a header in the response on a rate limited issue. 
+- Another waiting strategy for rate-limited issues could be explored. Refer to the [Handling of rate-limiting errors section](#35-handling-of-rate-limiting-errors)
+
